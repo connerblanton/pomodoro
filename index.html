@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Idle Hands Build Nothing</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="dist/main.css"
+    />
+  </head>
+  <body>
+    <section class="topBar">
+      <h1 id="workLabel">
+        <span>Enter Label Here</span>
+        <input
+          class="hide"
+          type="text"
+          name="workLabelInput"
+          id="workLabelInput"
+        />
+        <button class="labelAction hide" id="workLabelSubmit">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path
+              fill="#004a8c"
+              d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+            />
+          </svg>
+        </button>
+        <button class="labelAction hide" id="workLabelCancel">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path
+              fill="#ee2e41"
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
+        </button>
+      </h1>
+      <div class="settings">
+        <svg id="settings" style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path
+            d="M3,17V19H9V17H3M3,5V7H13V5H3M13,21V19H21V17H13V15H11V21H13M7,9V11H3V13H7V15H9V9H7M21,13V11H11V13H21M15,9H17V7H21V5H17V3H15V9Z"
+          />
+        </svg>
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path
+            d="M10,19H13V22H10V19M12,2C17.35,2.22 19.68,7.62 16.5,11.67C15.67,12.67 14.33,13.33 13.67,14.17C13,15 13,16 13,17H10C10,15.33 10,13.92 10.67,12.92C11.33,11.92 12.67,11.33 13.5,10.67C15.92,8.43 15.32,5.26 12,5A3,3 0 0,0 9,8H6A6,6 0 0,1 12,2Z"
+          />
+        </svg>
+      </div>
+    </section>
+    <main class="timers">
+      <section class="timer work">
+        <h3 class="title">Work</h3>
+        <section class="countdown">
+          <section class="wrapper">
+            <h3><span class="number" id="wMinute">25</span>min</h3>
+          </section>
+          <section class="wrapper">
+            <h3><span id="wSecond" class="number">00</span>sec</h3>
+          </section>
+        </section>
+      </section>
+      <section class="timer break">
+        <h3 class="title">Break</h3>
+        <section class="countdown">
+          <section class="wrapper">
+            <h3><span class="number" id="bMinute">05</span>min</h3>
+          </section>
+          <section class="wrapper">
+            <h3><span id="bSecond" class="number">00</span>sec</h3>
+          </section>
+        </section>
+      </section>
+      <section class="timer longBreak">
+        <h3 class="title">Long Break</h3>
+        <section class="countdown">
+          <section class="wrapper">
+            <h3><span class="number" id="lbMinute">20</span>min</h3>
+          </section>
+          <section class="wrapper">
+            <h3><span id="lbSecond" class="number">00</span>sec</h3>
+          </section>
+        </section>
+      </section>
+    </main>
+    <button id="start">Start Pomodoro</button>
+    <hr />
+    <section class="log">
+      <h3 class="title">Session Log</h3>
+      <section id="dataLog" class="dataLog">
+        <div class="title">Work Label</div>
+        <div class="title">Hours Worked</div>
+      </section>
+    </section>
+    <script src="dist/main.js"></script>
+  </body>
+</html>

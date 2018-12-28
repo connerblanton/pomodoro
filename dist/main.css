@@ -1,0 +1,200 @@
+.timers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  grid-gap: 1rem; }
+  .timers .timer {
+    transition: 1s;
+    display: grid;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 3px 5px 15px #897f8e; }
+    .timers .timer .countdown {
+      justify-self: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+      .timers .timer .countdown .wrapper {
+        margin: 2rem 0; }
+        .timers .timer .countdown .wrapper h3 {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: 100;
+          color: #565059; }
+          .timers .timer .countdown .wrapper h3 .number {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #004a8c; }
+    .timers .timer.disabled {
+      background-color: #d9ccdf;
+      opacity: 0.5; }
+      .timers .timer.disabled .title {
+        color: #897f8e; }
+      .timers .timer.disabled .countdown .wrapper h3 {
+        color: #897f8e; }
+        .timers .timer.disabled .countdown .wrapper h3 .number {
+          color: #897f8e; }
+
+button#start {
+  width: 75%;
+  justify-self: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 0.1rem solid #003666;
+  color: #003666;
+  max-width: 568px;
+  border-radius: 0.5rem;
+  outline: none; }
+  button#start:hover {
+    cursor: pointer;
+    background-color: #a2bdd5; }
+
+.topBar {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center; }
+  .topBar h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #565059; }
+    .topBar h1 span:hover {
+      cursor: pointer;
+      color: #bcaec2; }
+    .topBar h1 input {
+      height: 3rem;
+      font-size: 2.5rem;
+      width: 25rem; }
+    .topBar h1 .labelAction {
+      background-color: transparent;
+      border-radius: 0.5rem; }
+      .topBar h1 .labelAction:hover {
+        cursor: pointer; }
+      .topBar h1 .labelAction#workLabelSubmit {
+        border-color: #004a8c; }
+      .topBar h1 .labelAction#workLabelCancel {
+        border-color: #ee2e41; }
+  .topBar .settings {
+    justify-self: end; }
+    .topBar .settings svg path {
+      fill: #565059; }
+    .topBar .settings svg:hover {
+      cursor: pointer; }
+      .topBar .settings svg:hover path {
+        fill: #bcaec2; }
+
+.log {
+  margin: 1rem 0 0;
+  justify-self: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 3px 5px 15px #897f8e;
+  width: 75%;
+  padding: 0 0 1rem; }
+  .log .title {
+    margin: 0 0 2rem; }
+  .log .dataLog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center; }
+    .log .dataLog .title {
+      justify-self: center;
+      font-weight: 500;
+      font-size: 2rem; }
+    .log .dataLog .data {
+      justify-self: center;
+      font-size: 1rem;
+      font-weight: 100; }
+
+.skrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #004b8c5e;
+  z-index: 5; }
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 3px 5px 15px #897f8e;
+  z-index: 10; }
+  .modal .body {
+    margin: 2rem;
+    font-weight: 100;
+    font-size: 1.1rem; }
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; }
+
+.modal .body.settings {
+  text-align: end; }
+
+.step {
+  width: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  border: none; }
+
+.stepper {
+  font-size: 2rem;
+  background: transparent;
+  border-color: #004a8c;
+  color: #004a8c;
+  border-radius: 2rem;
+  width: 3rem;
+  height: 3rem;
+  outline: none;
+  margin: 0.5rem; }
+  .stepper:hover {
+    cursor: pointer;
+    background-color: #004b8c5e; }
+
+.applySettings {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0 0;
+  background-color: #6be393;
+  color: white;
+  border-radius: 2rem;
+  outline: none; }
+  .applySettings:hover {
+    cursor: pointer;
+    background-color: #4ea66b; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e5dde9;
+  display: grid; }
+
+hr {
+  border: 1px solid #d9ccdf;
+  width: 90%; }
+
+.hide {
+  display: none; }
+
+.no-scroll {
+  overflow: hidden; }
+
+.title {
+  justify-self: start;
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin: 0 0.2rem; }
+
+/*# sourceMappingURL=main.css.map */

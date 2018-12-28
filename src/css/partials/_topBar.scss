@@ -1,0 +1,56 @@
+.topBar {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-style: italic;
+    color: $grey-plus-2;
+
+    span:hover {
+      cursor: pointer;
+      color: $grey;
+    }
+
+    input {
+      height: 3rem;
+      font-size: 2.5rem;
+      width: 25rem;
+    }
+
+    .labelAction {
+      background-color: transparent;
+      border-radius: 0.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &#workLabelSubmit {
+        border-color: $primary;
+      }
+
+      &#workLabelCancel {
+        border-color: $red;
+      }
+    }
+  }
+
+  .settings {
+    justify-self: end;
+
+    svg {
+      path {
+        fill: $grey-plus-2;
+      }
+      &:hover {
+        cursor: pointer;
+        path {
+          fill: $grey;
+        }
+      }
+    }
+  }
+}

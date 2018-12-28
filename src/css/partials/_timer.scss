@@ -1,0 +1,57 @@
+.timers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  grid-gap: 1rem;
+
+  .timer {
+    transition: 1s;
+    display: grid;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 3px 5px 15px $grey-plus-1;
+
+    .countdown {
+      justify-self: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .wrapper {
+        margin: 2rem 0;
+        h3 {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: 100;
+          color: $grey-plus-2;
+
+          .number {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 500;
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    &.disabled {
+      background-color: $grey-minus-1;
+      opacity: 0.5;
+
+      .title {
+        color: $grey-plus-1;
+      }
+
+      .countdown {
+        .wrapper {
+          h3 {
+            color: $grey-plus-1;
+            .number {
+              color: $grey-plus-1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

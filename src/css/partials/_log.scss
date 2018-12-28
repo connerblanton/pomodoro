@@ -1,0 +1,31 @@
+.log {
+  margin: 1rem 0 0;
+  justify-self: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 3px 5px 15px $grey-plus-1;
+  width: 75%;
+  padding: 0 0 1rem;
+
+  .title {
+    margin: 0 0 2rem;
+  }
+
+  .dataLog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+
+    .title {
+      justify-self: center;
+      font-weight: 500;
+      font-size: 2rem;
+    }
+
+    .data {
+      justify-self: center;
+      font-size: 1rem;
+      font-weight: 100;
+    }
+  }
+}

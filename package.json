@@ -1,0 +1,25 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "Pomodoro App to stay focused and track work",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "sass": "sass src/css/main.scss dist/main.css",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connerblanton/pomodoro.git"
+  },
+  "author": "cblanton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connerblanton/pomodoro/issues"
+  },
+  "homepage": "https://github.com/connerblanton/pomodoro#readme",
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
