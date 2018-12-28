@@ -35,6 +35,9 @@
         .timers .timer.disabled .countdown .wrapper h3 .number {
           color: #897f8e; }
 
+@media screen and (max-width: 568px) {
+  .timers {
+    grid-template-columns: 1fr; } }
 button#start {
   width: 75%;
   justify-self: center;
@@ -196,5 +199,11 @@ hr {
   font-size: 2.5rem;
   font-weight: 100;
   margin: 0 0.2rem; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
