@@ -1,8 +1,3 @@
-let pomodoroLog = [
-  {
-    name: "Pomodoro App",
-    hoursWorked: 2
-  }
-];
+let pomodoroLog = [];
 
 export default pomodoroLog;
