@@ -6,6 +6,7 @@ import logPomodoro from "./logPomodoro";
 import initDataLog from "./initDataLog";
 import popModal from "./popModal";
 import settingsHTML from "./settingsHTML";
+import informationHTML from "./informationHTML";
 import populateSettings from "./populateSettings";
 import applySettings from "./applySettings";
 import closeModal from "./closeModal";
@@ -39,6 +40,10 @@ document.getElementById("settings").addEventListener("click", () => {
     applySettings();
     closeModal();
   });
+});
+
+document.getElementById("help").addEventListener("click", () => {
+  popModal("Information", informationHTML, "information");
 });
 
 // Emitted Events

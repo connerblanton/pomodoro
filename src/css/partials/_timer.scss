@@ -3,13 +3,12 @@
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
   grid-gap: 1rem;
+  margin: 1rem;
 
   .timer {
     transition: 1s;
     display: grid;
-    background-color: #fff;
-    border-radius: 1rem;
-    box-shadow: 3px 5px 15px $grey-plus-1;
+    @include card;
 
     .countdown {
       justify-self: center;
@@ -22,7 +21,7 @@
           margin: 0;
           font-size: 1.5rem;
           font-weight: 100;
-          color: $grey-plus-2;
+          color: $grey-plus-1;
 
           .number {
             margin: 0;
@@ -35,8 +34,9 @@
     }
 
     &.disabled {
-      background-color: $grey-minus-1;
+      background-color: $grey;
       opacity: 0.5;
+      border-color: transparent;
 
       .title {
         color: $grey-plus-1;

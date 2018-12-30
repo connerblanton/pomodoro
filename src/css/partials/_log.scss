@@ -1,9 +1,7 @@
 .log {
   margin: 1rem 0 0;
   justify-self: center;
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 3px 5px 15px $grey-plus-1;
+  @include card;
   width: 75%;
   padding: 0 0 1rem;
 

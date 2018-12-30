@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   align-items: center;
+  margin: 1rem;
 
   h1 {
     font-size: 2.5rem;
@@ -11,13 +12,17 @@
 
     span:hover {
       cursor: pointer;
-      color: $grey;
+      color: $grey-plus-1;
     }
 
     input {
       height: 3rem;
       font-size: 2.5rem;
       width: 25rem;
+      font-weight: 300;
+      font-family: "Roboto", sans-serif;
+      max-width: 355px;
+      outline-color: $primary;
     }
 
     .labelAction {
@@ -29,7 +34,7 @@
       }
 
       &#workLabelSubmit {
-        border-color: $primary;
+        border-color: $green-plus-1;
       }
 
       &#workLabelCancel {
@@ -48,9 +53,34 @@
       &:hover {
         cursor: pointer;
         path {
-          fill: $grey;
+          fill: $grey-plus-1;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .topBar {
+    grid-template-columns: 100%;
+
+    h1 {
+      justify-self: center;
+
+      input {
+        width: 20rem;
+        margin: 0 0.5rem;
+      }
+
+      .labelAction {
+        width: 48%;
+      }
+    }
+
+    .settings {
+      justify-self: center;
+      margin: 0 0 2rem;
+      transform: scale(1.5);
     }
   }
 }

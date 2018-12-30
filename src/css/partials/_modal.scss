@@ -4,7 +4,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #004b8c5e;
+  background-color: #6161617c;
   z-index: 5;
 }
 
@@ -14,13 +14,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   box-shadow: 3px 5px 15px $grey-plus-1;
   z-index: 10;
+  padding: 1rem;
+  max-height: 500px;
+  overflow: auto;
 
   .body {
     margin: 2rem;
     font-weight: 100;
     font-size: 1.1rem;
+
+    &.information {
+      text-align: center;
+      margin: 0;
+
+      h2 {
+        font-weight: 500;
+      }
+    }
   }
 }

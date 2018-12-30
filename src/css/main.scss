@@ -1,20 +1,31 @@
 @import "./partials/colors";
+@import "./partials/shadows";
+@import "./partials/card";
 @import "./partials/timer";
-@import "./partials/start";
 @import "./partials/topBar";
-@import "./partials/log";
+@import "./partials/sessionLog";
 @import "./partials/modal";
 @import "./partials/inputOverrides";
 @import "./partials/settings";
+@import "./partials/remote";
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
 
 body {
   font-family: "Roboto", sans-serif;
   background-color: $grey-minus-2;
-  display: grid;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: -1rem 0;
 }
 
 hr {
-  border: 1px solid $grey-minus-1;
+  border: 5px solid $green-plus-1;
+  border-radius: 25rem 0 25rem 0;
   width: 90%;
 }
 
@@ -31,11 +42,9 @@ hr {
   font-size: 2.5rem;
   font-weight: 100;
   margin: 0 0.2rem;
+  color: $grey-plus-2;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+input {
+  outline-color: $primary;
 }

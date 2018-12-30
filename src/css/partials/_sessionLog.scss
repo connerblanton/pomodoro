@@ -1,0 +1,37 @@
+.sessionLog {
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+
+  .log {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    @include card;
+    width: 90%;
+    max-width: 775px;
+    padding: 0 0 1rem;
+
+    .title {
+      margin: 0 0 2rem;
+    }
+
+    .dataLog {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+
+      .title {
+        justify-self: center;
+        font-weight: 500;
+        font-size: 2rem;
+      }
+
+      .data {
+        justify-self: center;
+        font-size: 1rem;
+        font-weight: 100;
+      }
+    }
+  }
+}

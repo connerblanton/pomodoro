@@ -2,13 +2,15 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
-  grid-gap: 1rem; }
+  grid-gap: 1rem;
+  margin: 1rem; }
   .timers .timer {
     transition: 1s;
     display: grid;
-    background-color: #fff;
-    border-radius: 1rem;
-    box-shadow: 3px 5px 15px #897f8e; }
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 10px 1px #9e9e9e;
+    border: 1px solid #eeeeee; }
     .timers .timer .countdown {
       justify-self: center;
       display: grid;
@@ -19,97 +21,108 @@
           margin: 0;
           font-size: 1.5rem;
           font-weight: 100;
-          color: #565059; }
+          color: #616161; }
           .timers .timer .countdown .wrapper h3 .number {
             margin: 0;
             font-size: 3rem;
             font-weight: 500;
-            color: #004a8c; }
+            color: #651fff; }
     .timers .timer.disabled {
-      background-color: #d9ccdf;
-      opacity: 0.5; }
+      background-color: #9e9e9e;
+      opacity: 0.5;
+      border-color: transparent; }
       .timers .timer.disabled .title {
-        color: #897f8e; }
+        color: #616161; }
       .timers .timer.disabled .countdown .wrapper h3 {
-        color: #897f8e; }
+        color: #616161; }
         .timers .timer.disabled .countdown .wrapper h3 .number {
-          color: #897f8e; }
+          color: #616161; }
 
 @media screen and (max-width: 568px) {
   .timers {
     grid-template-columns: 1fr; } }
-button#start {
-  width: 75%;
-  justify-self: center;
-  margin: 1rem 0;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  background-color: transparent;
-  border: 0.1rem solid #003666;
-  color: #003666;
-  max-width: 568px;
-  border-radius: 0.5rem;
-  outline: none; }
-  button#start:hover {
-    cursor: pointer;
-    background-color: #a2bdd5; }
-
 .topBar {
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  align-items: center; }
+  align-items: center;
+  margin: 1rem; }
   .topBar h1 {
     font-size: 2.5rem;
     font-weight: 300;
     font-style: italic;
-    color: #565059; }
+    color: #212121; }
     .topBar h1 span:hover {
       cursor: pointer;
-      color: #bcaec2; }
+      color: #616161; }
     .topBar h1 input {
       height: 3rem;
       font-size: 2.5rem;
-      width: 25rem; }
+      width: 25rem;
+      font-weight: 300;
+      font-family: "Roboto", sans-serif;
+      max-width: 355px;
+      outline-color: #651fff; }
     .topBar h1 .labelAction {
       background-color: transparent;
       border-radius: 0.5rem; }
       .topBar h1 .labelAction:hover {
         cursor: pointer; }
       .topBar h1 .labelAction#workLabelSubmit {
-        border-color: #004a8c; }
+        border-color: #00c853; }
       .topBar h1 .labelAction#workLabelCancel {
-        border-color: #ee2e41; }
+        border-color: #ff1744; }
   .topBar .settings {
     justify-self: end; }
     .topBar .settings svg path {
-      fill: #565059; }
+      fill: #212121; }
     .topBar .settings svg:hover {
       cursor: pointer; }
       .topBar .settings svg:hover path {
-        fill: #bcaec2; }
+        fill: #616161; }
 
-.log {
-  margin: 1rem 0 0;
-  justify-self: center;
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 3px 5px 15px #897f8e;
-  width: 75%;
-  padding: 0 0 1rem; }
-  .log .title {
-    margin: 0 0 2rem; }
-  .log .dataLog {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center; }
-    .log .dataLog .title {
+@media screen and (max-width: 568px) {
+  .topBar {
+    grid-template-columns: 100%; }
+    .topBar h1 {
+      justify-self: center; }
+      .topBar h1 input {
+        width: 20rem;
+        margin: 0 0.5rem; }
+      .topBar h1 .labelAction {
+        width: 48%; }
+    .topBar .settings {
       justify-self: center;
-      font-weight: 500;
-      font-size: 2rem; }
-    .log .dataLog .data {
-      justify-self: center;
-      font-size: 1rem;
-      font-weight: 100; }
+      margin: 0 0 2rem;
+      transform: scale(1.5); } }
+.sessionLog {
+  position: relative;
+  margin: 1rem;
+  padding: 1rem; }
+  .sessionLog .log {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 10px 1px #9e9e9e;
+    border: 1px solid #eeeeee;
+    width: 90%;
+    max-width: 775px;
+    padding: 0 0 1rem; }
+    .sessionLog .log .title {
+      margin: 0 0 2rem; }
+    .sessionLog .log .dataLog {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center; }
+      .sessionLog .log .dataLog .title {
+        justify-self: center;
+        font-weight: 500;
+        font-size: 2rem; }
+      .sessionLog .log .dataLog .data {
+        justify-self: center;
+        font-size: 1rem;
+        font-weight: 100; }
 
 .skrim {
   position: absolute;
@@ -117,7 +130,7 @@ button#start {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #004b8c5e;
+  background-color: #6161617c;
   z-index: 5; }
 
 .modal {
@@ -126,13 +139,21 @@ button#start {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 3px 5px 15px #897f8e;
-  z-index: 10; }
+  border-radius: 0.3rem;
+  box-shadow: 3px 5px 15px #616161;
+  z-index: 10;
+  padding: 1rem;
+  max-height: 500px;
+  overflow: auto; }
   .modal .body {
     margin: 2rem;
     font-weight: 100;
     font-size: 1.1rem; }
+    .modal .body.information {
+      text-align: center;
+      margin: 0; }
+      .modal .body.information h2 {
+        font-weight: 500; }
 
 input[type="number"] {
   -webkit-appearance: textfield;
@@ -145,47 +166,92 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal .body.settings {
   text-align: end; }
+  .modal .body.settings .setting {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem; }
+    .modal .body.settings .setting label {
+      justify-self: center;
+      font-weight: 300; }
+    .modal .body.settings .setting .controls {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); }
 
 .step {
   width: 3rem;
   font-size: 2rem;
   text-align: center;
-  border: none; }
+  border: none;
+  justify-self: center; }
 
 .stepper {
   font-size: 2rem;
-  background: transparent;
-  border-color: #004a8c;
-  color: #004a8c;
+  color: #651fff;
   border-radius: 2rem;
   width: 3rem;
   height: 3rem;
   outline: none;
-  margin: 0.5rem; }
+  margin: 0.5rem;
+  border: none;
+  background-color: transparent; }
   .stepper:hover {
     cursor: pointer;
-    background-color: #004b8c5e; }
+    background-color: #651fff5e; }
 
 .applySettings {
   width: 100%;
   font-size: 1.5rem;
   padding: 0.5rem;
   margin: 1rem 0 0;
-  background-color: #6be393;
+  background-color: #00e676;
   color: white;
   border-radius: 2rem;
   outline: none; }
   .applySettings:hover {
     cursor: pointer;
-    background-color: #4ea66b; }
+    background-color: #00c853; }
+
+.remote {
+  position: relative;
+  width: 100%;
+  height: 100px; }
+  .remote #start {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 568px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background-color: #651fff;
+    border-color: #651fff;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    outline: none;
+    box-shadow: 2px 2px 5px #9e9e9e;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif; }
+    .remote #start:hover {
+      cursor: pointer;
+      box-shadow: 2px 2px 10px 1px #9e9e9e; }
+
+html {
+  height: 100vh;
+  width: 100vw; }
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #e5dde9;
-  display: grid; }
+  background-color: #eeeeee;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: -1rem 0; }
 
 hr {
-  border: 1px solid #d9ccdf;
+  border: 5px solid #00c853;
+  border-radius: 25rem 0 25rem 0;
   width: 90%; }
 
 .hide {
@@ -198,12 +264,10 @@ hr {
   justify-self: start;
   font-size: 2.5rem;
   font-weight: 100;
-  margin: 0 0.2rem; }
+  margin: 0 0.2rem;
+  color: #212121; }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center; }
+input {
+  outline-color: #651fff; }
 
 /*# sourceMappingURL=main.css.map */
