@@ -15,8 +15,15 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: $grey-minus-2;
+  // font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  // background-color: $grey-minus-2;
+  background: linear-gradient(
+    135deg,
+    $primary-plus-1 0%,
+    $primary 50%,
+    $primary-minus-1 100%
+  );
   position: relative;
   height: 100%;
   width: 100%;
@@ -24,7 +31,7 @@ body {
 }
 
 hr {
-  border: 5px solid $green-plus-1;
+  border: 5px solid $gold;
   border-radius: 25rem 0 25rem 0;
   width: 90%;
 }
@@ -39,8 +46,8 @@ hr {
 
 .title {
   justify-self: start;
-  font-size: 2.5rem;
-  font-weight: 100;
+  font-size: 3rem;
+  font-weight: 800;
   margin: 0 0.2rem;
   color: $grey-plus-2;
 }

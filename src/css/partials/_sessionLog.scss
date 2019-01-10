@@ -11,15 +11,18 @@
     width: 90%;
     max-width: 775px;
     padding: 0 0 1rem;
+    background-color: $deep-blue;
 
     .title {
       margin: 0 0 2rem;
+      color: #ffa000;
     }
 
     .dataLog {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       justify-content: center;
+      color: #ffa000;
 
       .title {
         justify-self: center;
